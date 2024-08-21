@@ -1,5 +1,4 @@
 
-```markdown
 # Federated Learning Workflow Management
 
 This `README.md` provides an overview of the federated learning workflow management setup using Pegasus WMS. It includes details on script usage, how to modify paths, and setup triggers.
