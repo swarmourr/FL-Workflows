@@ -144,5 +144,5 @@ Triggers are used to automatically submit workflows based on file patterns using
 
 Ensure that all paths are updated according to your environment before running the scripts. This setup will help you manage federated learning workflows effectively with Pegasus WMS.
 
-For further configurations or troubleshooting, refer to the Pegasus documentation or seek additional support.
+For further configurations or troubleshooting, refer to the [Pegasus documentation](https://pegasus.isi.edu/documentation/) or seek additional support pegasus-support@isi.edu.
 
