@@ -1,3 +1,6 @@
+![Static Badge](https://custom-icon-badges.demolab.com/badge/pegasus-5.0.1-wms?style=flat&logo=pegasus-wms&color=blue&link=https%3A%2F%2Fgithub.com%2Fpegasus-isi%2Fpegasus)
+![Static Badge](https://custom-icon-badges.demolab.com/badge/apptainer-1.3.3--1.el8-wms?style=flat&logo=apptainer&color=blue&link=https%3A%2F%2Fgithub.com%2Fpegasus-isi%2Fpegasus)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pegasus-wms?link=https%3A%2F%2Fgithub.com%2Fpegasus-isi%2Fpegasus)
 
 # Federated Learning Workflow Management
 
