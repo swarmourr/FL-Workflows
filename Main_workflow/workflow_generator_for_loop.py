@@ -82,6 +82,14 @@ class FederatedLearningWorkflow():
     def create_transformation_catalog(self, exec_site_name="condorpool"):
         self.tc = TransformationCatalog()
         
+        # Define the container for federated learning Using Docker
+        """
+        federated_learning_container = Container("federated_learning_container",
+            container_type = Container.DOCKER,
+            image="docker:///swarmourr/federated_learning_container_sub"
+        )
+        """
+        # Define the container for federated learning Using SINGULARITY
         federated_learning_container = Container("federated_learning_container",
             container_type = Container.SINGULARITY,
             image=os.path.join(self.wf_dir, "../containers/fl.sif"),

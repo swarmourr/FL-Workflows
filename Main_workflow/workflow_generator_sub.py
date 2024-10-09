@@ -87,6 +87,14 @@ class FederatedLearningWorkflow():
     def create_transformation_catalog(self, exec_site_name="condorpool"):
         self.tc = TransformationCatalog()
         
+        # Define the container for federated learning Using Docker
+        """
+        federated_learning_container = Container("federated_learning_container",
+            container_type = Container.DOCKER,
+            image="docker:///swarmourr/federated_learning_container_sub"
+        )
+        """
+        # Define the container for federated learning Using SINGULARITY
         federated_learning_container = Container("federated_learning_container",
             container_type = Container.SINGULARITY,
             image=os.path.join(self.wf_dir, "../containers/fl.sif"),
@@ -292,7 +300,7 @@ if __name__ == '__main__':
     if args.clients < 1:
           print("Clients number needs to be > 0")
           exit()
-    
+    #def run_workflow(self,execution_site_name, skip_sites_catalog,clients, number_of_selected_clients, number_of_rounds,initiation, model_path,round,name,score):
     workflow = FederatedLearningWorkflow(dagfile=args.output)
     workflow.run_workflow(args.execution_site_name, args.skip_sites_catalog,args.clients, args.number_of_selected_clients, args.max,False, args.m,args.cr,args.output,args.score)
       

@@ -97,7 +97,14 @@ class FederatedLearningWorkflow():
         # Define the transformation catalog, including executables and containers
         self.tc = TransformationCatalog()
         
-        # Define the container for federated learning
+        # Define the container for federated learning Using Docker
+        """
+        federated_learning_container = Container("federated_learning_container",
+            container_type = Container.DOCKER,
+            image="docker:///swarmourr/federated_learning_container_sub"
+        )
+        """
+        # Define the container for federated learning Using SINGULARITY
         federated_learning_container = Container("federated_learning_container",
             container_type = Container.SINGULARITY,
             image=os.path.join(self.wf_dir, "../containers/fl.sif"),
@@ -250,10 +257,10 @@ if __name__ == '__main__':
         model_path = f"global_model_round_{int(round)-1}.h5"
     
     # Run the federated learning workflow
-    workflow.run_workflow(args.execution_site_name, args.skip-sites_catalog, args.clients, args.number_of_selected_clients, args.number_of_rounds, initiation, model_path, round, args.score)
+    workflow.run_workflow(args.execution_site_name, args.skip_sites_catalog, args.clients, args.number_of_selected_clients, args.number_of_rounds, initiation, model_path, round, args.score)
     
     try:
         # Plan and submit the workflow to Pegasus
-        workflow.wf.plan(sites=["condorpool"], output_sites=["local"]).wait()
+        workflow.wf.plan(submit=True,sites=["condorpool"], output_sites=["local"]).wait()
     except PegasusClientError as e:
         print(e.output)
