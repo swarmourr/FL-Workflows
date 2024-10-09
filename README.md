@@ -2,6 +2,9 @@
 ![Static Badge](https://custom-icon-badges.demolab.com/badge/apptainer-1.3.3--1.el8-wms?style=flat&logo=apptainer&color=blue&link=https%3A%2F%2Fgithub.com%2Fpegasus-isi%2Fpegasus)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pegasus-wms?link=https%3A%2F%2Fgithub.com%2Fpegasus-isi%2Fpegasus)
 
+> [!IMPORTANT]
+> **<ins>_LFS (Large File Storage) Usage_</ins>** </br> This repository uses **LFS (Large File Storage)** for managing large files, such as container images. Make sure you have Git LFS installed to clone this repository and download the large files properly.
+
 # Federated Learning Workflow Management
 
 This `README.md` provides an overview of the federated learning workflow management setup using Pegasus WMS. It includes details on script usage, how to modify paths, and setup triggers.
